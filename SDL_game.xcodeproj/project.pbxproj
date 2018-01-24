@@ -7,7 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B26EB62320138CCE00DFD3C9 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B26EB62220138CCE00DFD3C9 /* main.cpp */; };
+		B26EB62E20138D2A00DFD3C9 /* SDL2_mixer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B26EB62A20138D2A00DFD3C9 /* SDL2_mixer.framework */; };
+		B26EB62F20138D2A00DFD3C9 /* SDL2_ttf.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B26EB62B20138D2A00DFD3C9 /* SDL2_ttf.framework */; };
+		B26EB63020138D2A00DFD3C9 /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B26EB62C20138D2A00DFD3C9 /* SDL2.framework */; };
+		B26EB63120138D2A00DFD3C9 /* SDL2_image.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B26EB62D20138D2A00DFD3C9 /* SDL2_image.framework */; };
+		B2CC596920140C3D006CB129 /* MathUtil.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B2CC596820140C3D006CB129 /* MathUtil.cpp */; };
+		B2CC596B20140CC4006CB129 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B2CC596A20140CC4006CB129 /* main.cpp */; };
+		B2CC596F20140FE0006CB129 /* Game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B2CC596D20140FE0006CB129 /* Game.cpp */; };
+		B2CC597220141157006CB129 /* Car.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B2CC597020141157006CB129 /* Car.cpp */; };
+		B2CC597520141373006CB129 /* TextureManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B2CC597320141373006CB129 /* TextureManager.cpp */; };
+		B2CC597B20141FFD006CB129 /* Background.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B2CC597920141FFD006CB129 /* Background.cpp */; };
+		B2FFBDCF201487D0003CFB82 /* Map.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B2FFBDCD201487D0003CFB82 /* Map.cpp */; };
+		B2FFBDD82014AC4E003CFB82 /* Collision.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B2FFBDD62014AC4E003CFB82 /* Collision.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,8 +34,32 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		B2332C02201549ED00A87926 /* winner.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = winner.jpg; sourceTree = "<group>"; };
 		B26EB61F20138CCE00DFD3C9 /* SDL_game */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SDL_game; sourceTree = BUILT_PRODUCTS_DIR; };
-		B26EB62220138CCE00DFD3C9 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		B26EB62A20138D2A00DFD3C9 /* SDL2_mixer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2_mixer.framework; path = ../../../../../Library/Frameworks/SDL2_mixer.framework; sourceTree = "<group>"; };
+		B26EB62B20138D2A00DFD3C9 /* SDL2_ttf.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2_ttf.framework; path = ../../../../../Library/Frameworks/SDL2_ttf.framework; sourceTree = "<group>"; };
+		B26EB62C20138D2A00DFD3C9 /* SDL2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2.framework; path = ../../../../../Library/Frameworks/SDL2.framework; sourceTree = "<group>"; };
+		B26EB62D20138D2A00DFD3C9 /* SDL2_image.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2_image.framework; path = ../../../../../Library/Frameworks/SDL2_image.framework; sourceTree = "<group>"; };
+		B28500C12013E40900933E0D /* car.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = car.png; sourceTree = "<group>"; };
+		B2CC596720140C3D006CB129 /* MathUtil.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; path = MathUtil.hpp; sourceTree = "<group>"; };
+		B2CC596820140C3D006CB129 /* MathUtil.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; path = MathUtil.cpp; sourceTree = "<group>"; };
+		B2CC596A20140CC4006CB129 /* main.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; path = main.cpp; sourceTree = "<group>"; };
+		B2CC596C20140D29006CB129 /* bg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg.jpg; sourceTree = "<group>"; };
+		B2CC596D20140FE0006CB129 /* Game.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Game.cpp; sourceTree = "<group>"; };
+		B2CC596E20140FE0006CB129 /* Game.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Game.hpp; sourceTree = "<group>"; };
+		B2CC597020141157006CB129 /* Car.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Car.cpp; sourceTree = "<group>"; };
+		B2CC597120141157006CB129 /* Car.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Car.hpp; sourceTree = "<group>"; };
+		B2CC597320141373006CB129 /* TextureManager.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = TextureManager.cpp; sourceTree = "<group>"; };
+		B2CC597420141373006CB129 /* TextureManager.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = TextureManager.hpp; sourceTree = "<group>"; };
+		B2CC597920141FFD006CB129 /* Background.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Background.cpp; sourceTree = "<group>"; };
+		B2CC597A20141FFD006CB129 /* Background.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Background.hpp; sourceTree = "<group>"; };
+		B2FFBDCD201487D0003CFB82 /* Map.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Map.cpp; sourceTree = "<group>"; };
+		B2FFBDCE201487D0003CFB82 /* Map.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Map.hpp; sourceTree = "<group>"; };
+		B2FFBDD020148A2B003CFB82 /* wall.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = wall.jpg; sourceTree = "<group>"; };
+		B2FFBDD120149289003CFB82 /* map.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = map.txt; sourceTree = "<group>"; };
+		B2FFBDD5201495D1003CFB82 /* Global.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; path = Global.hpp; sourceTree = "<group>"; };
+		B2FFBDD62014AC4E003CFB82 /* Collision.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Collision.cpp; sourceTree = "<group>"; };
+		B2FFBDD72014AC4E003CFB82 /* Collision.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Collision.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +67,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B26EB62E20138D2A00DFD3C9 /* SDL2_mixer.framework in Frameworks */,
+				B26EB62F20138D2A00DFD3C9 /* SDL2_ttf.framework in Frameworks */,
+				B26EB63020138D2A00DFD3C9 /* SDL2.framework in Frameworks */,
+				B26EB63120138D2A00DFD3C9 /* SDL2_image.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,6 +82,7 @@
 			children = (
 				B26EB62120138CCE00DFD3C9 /* SDL_game */,
 				B26EB62020138CCE00DFD3C9 /* Products */,
+				B26EB62920138D2A00DFD3C9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,9 +97,56 @@
 		B26EB62120138CCE00DFD3C9 /* SDL_game */ = {
 			isa = PBXGroup;
 			children = (
-				B26EB62220138CCE00DFD3C9 /* main.cpp */,
+				B28500822013AC6F00933E0D /* src */,
+				B28500812013A9B800933E0D /* assets */,
 			);
 			path = SDL_game;
+			sourceTree = "<group>";
+		};
+		B26EB62920138D2A00DFD3C9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B26EB62D20138D2A00DFD3C9 /* SDL2_image.framework */,
+				B26EB62A20138D2A00DFD3C9 /* SDL2_mixer.framework */,
+				B26EB62B20138D2A00DFD3C9 /* SDL2_ttf.framework */,
+				B26EB62C20138D2A00DFD3C9 /* SDL2.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B28500812013A9B800933E0D /* assets */ = {
+			isa = PBXGroup;
+			children = (
+				B2332C02201549ED00A87926 /* winner.jpg */,
+				B2FFBDD020148A2B003CFB82 /* wall.jpg */,
+				B2CC596C20140D29006CB129 /* bg.jpg */,
+				B28500C12013E40900933E0D /* car.png */,
+				B2FFBDD120149289003CFB82 /* map.txt */,
+			);
+			path = assets;
+			sourceTree = "<group>";
+		};
+		B28500822013AC6F00933E0D /* src */ = {
+			isa = PBXGroup;
+			children = (
+				B2CC596A20140CC4006CB129 /* main.cpp */,
+				B2CC596D20140FE0006CB129 /* Game.cpp */,
+				B2CC596E20140FE0006CB129 /* Game.hpp */,
+				B2CC596820140C3D006CB129 /* MathUtil.cpp */,
+				B2CC596720140C3D006CB129 /* MathUtil.hpp */,
+				B2CC597020141157006CB129 /* Car.cpp */,
+				B2CC597120141157006CB129 /* Car.hpp */,
+				B2CC597320141373006CB129 /* TextureManager.cpp */,
+				B2FFBDCD201487D0003CFB82 /* Map.cpp */,
+				B2FFBDCE201487D0003CFB82 /* Map.hpp */,
+				B2CC597420141373006CB129 /* TextureManager.hpp */,
+				B2CC597920141FFD006CB129 /* Background.cpp */,
+				B2CC597A20141FFD006CB129 /* Background.hpp */,
+				B2FFBDD5201495D1003CFB82 /* Global.hpp */,
+				B2FFBDD62014AC4E003CFB82 /* Collision.cpp */,
+				B2FFBDD72014AC4E003CFB82 /* Collision.hpp */,
+			);
+			path = src;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -119,7 +206,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B26EB62320138CCE00DFD3C9 /* main.cpp in Sources */,
+				B2CC596F20140FE0006CB129 /* Game.cpp in Sources */,
+				B2CC596B20140CC4006CB129 /* main.cpp in Sources */,
+				B2FFBDD82014AC4E003CFB82 /* Collision.cpp in Sources */,
+				B2CC597220141157006CB129 /* Car.cpp in Sources */,
+				B2CC597B20141FFD006CB129 /* Background.cpp in Sources */,
+				B2CC596920140C3D006CB129 /* MathUtil.cpp in Sources */,
+				B2FFBDCF201487D0003CFB82 /* Map.cpp in Sources */,
+				B2CC597520141373006CB129 /* TextureManager.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -233,6 +327,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -241,6 +339,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
