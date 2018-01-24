@@ -5,13 +5,19 @@
 #include "TextureManager.hpp"
 #include "Global.hpp"
 #include "Collision.hpp"
+#include "Button.h"
 
 
 SDL_Renderer * Game::renderer = nullptr;
 Car *car = nullptr;
-Background *background = nullptr;
+Background *mapBackground = nullptr;
+Background *homeBackground = nullptr;
 Collision *collision = nullptr;
 SDL_Texture *winTexture = nullptr;
+SDL_Texture *loseTexture = nullptr;
+Button *startBtn = nullptr;
+Button *quitBtn = nullptr;
+
 Game::Game(){
     
 }
@@ -40,12 +46,25 @@ void Game::init()
     }else
         isRunning = false;
     
+    
+    initalScreen = true;
+    startBtn = new Button( 140, 460, 180, 50 );
+    quitBtn = new Button( 510, 460, 180, 50 );
+    
+    
+    if( (startBtn->load_files("assets/startbut.png") == false) or (quitBtn->load_files("assets/quitbut.png") == false))
+        stopGame();
+    startBtn->set_clips();
+    quitBtn->set_clips();
+    
     car = new Car("assets/car.png");
-    background = new Background("assets/bg.jpg");
+    mapBackground = new Background("assets/bg.jpg");
+    homeBackground = new Background("assets/home.jpg");
     collision = new Collision();
     mapToDisplay = new Map();
     
     winTexture = TextureManager::loadTexture("assets/winner.jpg");
+    loseTexture = TextureManager::loadTexture("assets/game_over.jpg");
 }
 
 void Game::handleEvents(){
@@ -69,33 +88,50 @@ void Game::handleEvents(){
             default:
                 break;
         }
+        
+        if(initalScreen){
+            startBtn->handle_events(&event);
+            quitBtn->handle_events(&event);
+        }
     }
-    if(!isWon())
+    
+    if(!isWon() and !initalScreen)
         car->handleEvents();
 }
 
 void Game::update(){
     
-    if(!isWon()){
+    if(!isWon() and !initalScreen){
         collision->detectCollision(this, car);
         car->update();
     }
+    if(quitBtn->buttonclick == true){
+        Game::stopGame();
+    }
+    if(startBtn->buttonclick == true){
+        initalScreen = false;
+    }
+    
 }
 
 void Game::render()
 {
     SDL_RenderClear(renderer);
-    if(isWon()){
-        SDL_Rect dest;
-        dest.w = 576;
-        dest.h = 640;
-        dest.x = 115;
-        dest.y = 0;
-        SDL_RenderCopy(Game::renderer, winTexture, NULL, &dest);
-    }else{
-        background->render();
+    if(initalScreen){
+        homeBackground->render();
+        startBtn->showButton();
+        quitBtn->showButton();
+    }
+    else{
+        if(isWon()){
+            SDL_RenderCopy(Game::renderer, winTexture, NULL, NULL);
+        }else if(isLose()){
+            SDL_RenderCopy(Game::renderer, loseTexture, NULL, NULL);
+        }else{
+        mapBackground->render();
         mapToDisplay->drawMap();
         car->render();
+    }
     }
     SDL_RenderPresent(renderer);
 }

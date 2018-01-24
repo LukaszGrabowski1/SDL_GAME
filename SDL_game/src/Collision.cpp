@@ -18,9 +18,10 @@ void Collision::detectCollision(Game *game, Car *car){
     Map *map = game->mapToDisplay;
     for(auto &wall: map->getWalls()) {
         if(detectCollisionWithWall(wall, car))
-            game->stopGame();
+            game->gameLose();
     }
     
+    if(!game->isLose())
     for(auto &finish: map->getFinishes()) {
         if(detectCollisionWithWall(finish, car)){
             game->gameWon();

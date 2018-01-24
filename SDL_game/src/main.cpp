@@ -20,16 +20,12 @@ int main(int argc, char *argv[])
     Uint32 frameStart;
     int frameTime;
 
-    
     while (game->running()) {
-        
         frameStart = SDL_GetTicks();
-        
+
         game->handleEvents();
         game->update();
         game->render();
-        
-        
         frameTime = SDL_GetTicks() - frameStart;
         if(frameDelay > frameTime){
             SDL_Delay(frameDelay - frameTime);
@@ -37,6 +33,8 @@ int main(int argc, char *argv[])
     }
     
     
+    
+        
     game->clean();
     return 0;
 }

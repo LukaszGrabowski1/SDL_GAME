@@ -17,15 +17,20 @@ public:
     void clean();
     bool running() { return isRunning;}
     void stopGame() {isRunning = false;}
+    void startGame() {isRunning = true;}
     bool isWon() {return win;}
-    void gameWon() {win = true;}
+    bool isLose() {return lose;}
+    void gameWon() {win = true; lose = false;}
+    void gameLose() {win = false; lose = true;}
     static SDL_Renderer *renderer;
     Map *mapToDisplay;
+    bool initalScreen;
     
 private:
     int cnt;
     bool isRunning;
     bool win;
+    bool lose;
     SDL_Window *window;
 };
 #endif /* Game_hpp */
