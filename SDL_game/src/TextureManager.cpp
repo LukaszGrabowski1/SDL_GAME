@@ -1,5 +1,6 @@
 #include "TextureManager.hpp"
 
+// Code from YouTube Tutorial - Let's Make Games
 SDL_Texture* TextureManager::loadTexture(const char *fileName)
 {
     SDL_Surface *tempSurface = IMG_Load(fileName);

@@ -3,6 +3,7 @@
 
 #include "Game.hpp"
 
+// Code from YouTube Tutorial - Let's Make Games
 class TextureManager{
 public:
     static SDL_Texture *loadTexture(const char* fileName);
