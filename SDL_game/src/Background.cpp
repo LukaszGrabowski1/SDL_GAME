@@ -15,6 +15,8 @@ Background::Background(const char* file)
     objTexture = TextureManager::loadTexture(file);
 }
 
+Background::~Background(){};
+
 
 void Background::render()
 {

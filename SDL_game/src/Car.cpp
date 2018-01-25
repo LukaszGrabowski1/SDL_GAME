@@ -25,6 +25,8 @@ Car::Car(const char* file)
     ang = 90;
 }
 
+Car::~Car(){};
+
 void Car::handleEvents(){
     const float acc = 2.0f;
     
